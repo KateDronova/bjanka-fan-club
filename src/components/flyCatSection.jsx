@@ -6,8 +6,6 @@ function FlyCatSection() {
   const SPEED = 0.01;
 
   function onMouseMove(event) {
-    // const horizontal = -(event.offsetY - window.offsetHeight / 2) * SPEED;
-    // const vertical = (event.offsetX - window.offsetWidth / 2) * SPEED;
     const horizontal = -(event.clientY - window.innerHeight / 2) * SPEED;
     const vertical = (event.clientX - window.innerWidth / 2) * SPEED;
 
@@ -27,10 +25,10 @@ function FlyCatSection() {
       style={{ transform: transformStyle }}
     >
       <header className="parallax__header">
-        <h1 className="parallax__title">
+        <h2 className="parallax__title">
           Drea<span>meow</span> high
-        </h1>
-        <h2 className="parallax__subtitle">Just fly!</h2>
+        </h2>
+        <h3 className="parallax__subtitle">Just fly!</h3>
       </header>
       <div className="parallax__back"></div>
       <div className="parallax__middle"></div>
