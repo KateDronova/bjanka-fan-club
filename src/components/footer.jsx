@@ -1,9 +1,21 @@
-import './footer.css'
+import './footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
     <footer className="footer">
+      <div>
+        <p><strong>Follow Bjanka on:</strong>
+        <br/>
+          <FontAwesomeIcon icon={faSquareInstagram} />
+          &ensp;Instagram
+        </p>
+      </div>
       <p>
+        <FontAwesomeIcon icon={faSquareGithub} />
+        &ensp;
         <strong>Ekaterina Dronova</strong> на{' '}
         <a
           href="https://github.com/KateDronova"
@@ -12,9 +24,8 @@ function Footer() {
         >
           GitHub,
         </a>
-        <b>2023</b>
+        <b> 2023</b>
       </p>
-      <img src="../images/footer.png" alt="bjanka_cat" width="50svh" height="auto"/>
     </footer>
   );
 }
