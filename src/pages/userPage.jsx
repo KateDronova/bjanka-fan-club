@@ -7,15 +7,18 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import './userPage.css'
+import { useTranslation } from 'react-i18next';
 
 function UserPage() {
   const [user, setUser] = useState('friend');
+  const { t } = useTranslation();
+
   return (
     <main className="mainContent">
-      <h2>We are glad you are here, {user}!</h2>
+      <h2>{t('gladToSee')}{user}!</h2>
 
       <section className="mainContent__games">
-        <h3>Games</h3>
+        <h3>{t('games')}</h3>
         <Container>
           <Row xs={1} md={2} lg={3}>
             <Col>
@@ -53,7 +56,7 @@ function UserPage() {
       </section>
 
       <section className="mainContent__gallery">
-        <h3>Gallery</h3>
+        <h3>{t('gallery')}</h3>
         <Carousel>
           <Carousel.Item interval={2000}>
             <Image
@@ -81,7 +84,7 @@ function UserPage() {
       </section>
 
       <Link to={'/'}>
-        <Button variant="secondary" className="mainContent__btn">Return</Button>
+        <Button variant="secondary" className="mainContent__btn">{t('return')}</Button>
       </Link>
     </main>
   );

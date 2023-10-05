@@ -1,9 +1,11 @@
-import './flyCatSection.css';
 import { useState } from 'react';
+import './flyCatSection.css';
+import { useTranslation } from 'react-i18next';
 
 function FlyCatSection() {
   const [transformStyle, setTransformStyle] = useState('');
   const SPEED = 0.01;
+  const { t } = useTranslation();
 
   function onMouseMove(event) {
     const horizontal = -(event.clientY - window.innerHeight / 2) * SPEED;
@@ -24,12 +26,14 @@ function FlyCatSection() {
       onMouseOut={onMouseOut}
       style={{ transform: transformStyle }}
     >
+    <div className="parallax__wrapper">
       <header className="parallax__header">
         <h2 className="parallax__title">
-          Drea<span>meow</span> high
+        {t("drea")}<span>{t("meow")}</span>{t("high")}
         </h2>
-        <h3 className="parallax__subtitle">Just fly!</h3>
+        <h3 className="parallax__subtitle">{t("justFly")}</h3>
       </header>
+    </div>
       <div className="parallax__back"></div>
       <div className="parallax__middle"></div>
       <div className="parallax__front"></div>

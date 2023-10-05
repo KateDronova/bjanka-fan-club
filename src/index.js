@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+import './i18n';
 
 import Root from './Root';
 import WelcomePage from './pages/welcomePage';
-import SignUpPage from './pages/signUpPage'
+import SignUpPage from './pages/signUpPage';
 import ErrorPage from './pages/errorPage';
 import UserPage from './pages/userPage';
 
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
         element: <UserPage />,
         errorElement: <ErrorPage />,
       },
-    ]
+    ],
   },
 ]);
 

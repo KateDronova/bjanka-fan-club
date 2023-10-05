@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { useTranslation } from 'react-i18next';
 
 function SignUpPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <h2>Sign UP</h2>
@@ -15,7 +18,7 @@ function SignUpPage() {
         />
       </div>
       <Link to={'/'}>
-        <Button variant="secondary">Return</Button>
+        <Button variant="secondary">{t('return')}</Button>
       </Link>
     </>
   );

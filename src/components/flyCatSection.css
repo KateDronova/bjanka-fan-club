@@ -5,42 +5,49 @@
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
+
+  container-type: inline-size;
 }
 
-.parallax__header {
+.parallax__wrapper {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
-  width: 26%;
+  width: 36%;
   top: 50%;
-  left: 37%;
-
+  left: 32%;
+  
   color: #fff;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 1px 1px 5px #000;
   
+  
+  transform: translateY(-50%) translateZ(500px) scale(0.5);
+  /* scale = 1 + (translateZ * -1 / perspective) --> как расчитать scale */
+}
+
+.parallax__header {
   background: linear-gradient(90deg,rgb(139, 139, 255) 5%, rgb(117, 255, 255) 8%, rgb(139, 139, 255) 15%, rgb(117, 255, 255) 80%, rgb(139, 139, 255) 100%);
   border: 20px solid #fff;
   outline: 25px ridge hsl(0, 100%, 74%);
   box-shadow: 1px 5px 70px 40px #000;
 
-  transform: translateY(-50%) translateZ(500px) scale(0.5);
-  /* scale = 1 + (translateZ * -1 / perspective) --> как расчитать scale */
+  padding: 20px 25px;
+  margin: auto;
+  width: max-content;
 }
 
 .parallax__title {
-  font-size: 30px;
   & span {
-    font-size: 40px;
+    font-size: calc(1.375rem + 1.5vw);
     font-weight: 700;
   }
 }
 
 .parallax__subtitle {
-  font-size: 65px;
+  font-size: calc(2rem + 1.3vw);
   font-weight: 900;
 }
 
