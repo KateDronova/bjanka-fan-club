@@ -1,0 +1,27 @@
+:root {
+  --light-bg_1: #75ffff;
+  --light-bg_2: #8b8bff;
+  --light-bg_3: #6b6bdd;
+  --dark-bg_1: #171035;
+  --dark-bg_2: #1a3c6e;
+  --dark-bg_3: #294d84;
+
+  --light-salmon: #e88282;
+  --dark-salmon: #ef6161;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a:has(button) {
+  text-decoration: none;
+}

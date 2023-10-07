@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import './userPage.css'
+import '../styles/userPage.css'
 import { useTranslation } from 'react-i18next';
 
 function UserPage() {

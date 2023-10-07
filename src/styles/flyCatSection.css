@@ -28,16 +28,17 @@
   /* scale = 1 + (translateZ * -1 / perspective) --> как расчитать scale */
 }
 
-.parallax__header {
-  background: linear-gradient(90deg,rgb(139, 139, 255) 5%, rgb(117, 255, 255) 8%, rgb(139, 139, 255) 15%, rgb(117, 255, 255) 80%, rgb(139, 139, 255) 100%);
+/* .parallax__header {
+  background: linear-gradient(90deg,var(--dark-secondary) 5%, var(--dark-primary) 8%, var(--dark-secondary) 15%, var(--dark-primary) 80%, var(--dark-secondary) 100%);
+  background: linear-gradient(90deg,var(--light-secondary) 5%, var(--light-primary) 8%, var(--light-secondary) 15%, var(--light-primary) 80%, var(--light-secondary) 100%);
   border: 20px solid #fff;
-  outline: 25px ridge hsl(0, 100%, 74%);
+  outline: 25px ridge rgb(255, 122, 122);
   box-shadow: 1px 5px 70px 40px #000;
 
   padding: 20px 25px;
   margin: auto;
   width: max-content;
-}
+} */
 
 .parallax__title {
   & span {

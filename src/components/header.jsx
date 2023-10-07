@@ -1,26 +1,28 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './header.css';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
+import themeSlice from '../common/themeSlice';
+
+import '../styles/header.css';
 import Button from 'react-bootstrap/Button';
-import ToggleButton from 'react-bootstrap/ToggleButton';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-regular-svg-icons';
+import { faMoon } from '@fortawesome/free-regular-svg-icons';
 
 function Header() {
   const [isLoggedIn, setLoggedIn] = useState(false);
-  const [themeValue, setThemeValue] = useState('light');
   const { t } = useTranslation();
 
-  const LANGUAGES = [
-    { label: 'English', code: 'en' },
-    { label: 'Russian', code: 'ru' },
+  const themes = [
+    { name: 'Light', value: 'light', icon: 'faSun' },
+    { name: 'Dark', value: 'dark', icon: 'faMoon' },
   ];
 
-  const themes = [
-    { name: 'Light', value: 'light' },
-    { name: 'Dark', value: 'dark' },
-  ];
+  const setDarkTheme = themeSlice.actions.setDarkTheme;
+  const dispatch = useDispatch();
 
   function onLanguageChange(lang) {
     i18n.changeLanguage(lang);
@@ -70,18 +72,12 @@ function Header() {
 
         <div className="header__theme">
           <ButtonGroup>
-            {themes.map((theme, idx) => (
-              <ToggleButton
-                key={idx}
-                id={`theme-${idx}`}
-                type="radio"
-                variant={`outline-${theme.value}`}
-                name="theme"
-                value={theme.value}
-                checked={themeValue === theme.value}
-                onChange={(e) => setThemeValue(e.currentTarget.value)}
-              >&ensp;</ToggleButton>
-            ))}
+            <Button variant="outline-light" onClick={() => dispatch(setDarkTheme(false))}>
+              <FontAwesomeIcon icon={faSun} />
+            </Button>
+            <Button variant="outline-dark" onClick={() => dispatch(setDarkTheme(true))}>
+              <FontAwesomeIcon icon={faMoon} />
+            </Button>
           </ButtonGroup>
         </div>
       </nav>

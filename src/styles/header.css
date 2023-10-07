@@ -25,10 +25,10 @@
 .header__title {
   text-decoration: none;
   font-size: calc(1.575rem + 1.5vw);
-  color: hsl(0, 69%, 71%);
+  color: var(--light-salmon);
   text-shadow: 1px 1px 2px #000;
   &:hover {
-    color: hsl(0, 82%, 66%);
+    color: var(--dark-salmon);
     text-shadow: 1px 1px 3px #000;
   }
 }

@@ -1,4 +1,4 @@
-import './footer.css';
+import '../styles/footer.css';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -10,7 +10,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div>
-        <p><strong>{t("followBjanka")}</strong>
+        <p>{t("followBjanka")}
+        {/* <p><strong>{t("followBjanka")}</strong> */}
         <br/>
           <FontAwesomeIcon icon={faSquareInstagram} />
           &ensp;<a href='https://www.instagram.com/inspector_bjanka/'>Instagram</a>
@@ -19,7 +20,8 @@ function Footer() {
       <p>
         <FontAwesomeIcon icon={faSquareGithub} />
         &ensp;
-        <strong>{t("ekaterina")}</strong> {t("on")}{' '}
+        {t("ekaterina")} {t("on")}{' '}
+        {/* <strong>{t("ekaterina")}</strong> {t("on")}{' '} */}
         <a
           href="https://github.com/KateDronova"
           target="_blank"
@@ -27,7 +29,8 @@ function Footer() {
         >
           GitHub,
         </a>
-        <b> 2023</b>
+        &ensp;2023
+        {/* <b> 2023</b> */}
       </p>
     </footer>
   );
