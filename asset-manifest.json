@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/bjanka-fan-club/static/css/main.89232ded.css",
+    "main.js": "/bjanka-fan-club/static/js/main.7d9126d6.js",
+    "static/js/787.95bfee0a.chunk.js": "/bjanka-fan-club/static/js/787.95bfee0a.chunk.js",
+    "static/media/front.png": "/bjanka-fan-club/static/media/front.98aac569c6588e6284af.png",
+    "static/media/chilling_Bjanka.png": "/bjanka-fan-club/static/media/chilling_Bjanka.15b29e48eaf33a697f1c.png",
+    "static/media/middle.png": "/bjanka-fan-club/static/media/middle.10087e9bb70910bf2640.png",
+    "static/media/back.png": "/bjanka-fan-club/static/media/back.afa1e96be63a5cad4d9d.png",
+    "static/media/temporary.jpg": "/bjanka-fan-club/static/media/temporary.50809e50e49a2d6b5b5b.jpg",
+    "static/media/en.png": "/bjanka-fan-club/static/media/en.fbdc645756481b60ee0d.png",
+    "index.html": "/bjanka-fan-club/index.html",
+    "main.89232ded.css.map": "/bjanka-fan-club/static/css/main.89232ded.css.map",
+    "main.7d9126d6.js.map": "/bjanka-fan-club/static/js/main.7d9126d6.js.map",
+    "787.95bfee0a.chunk.js.map": "/bjanka-fan-club/static/js/787.95bfee0a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89232ded.css",
+    "static/js/main.7d9126d6.js"
+  ]
+}
